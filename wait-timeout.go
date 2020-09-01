@@ -16,7 +16,7 @@ func NewSingleWaitGroup() *sync.WaitGroup {
 }
 
 func WaitTimeout(wg *sync.WaitGroup, timeout time.Duration) bool {
-	c := make(chan int)
+	c := make(chan interface{})
 	go func() {
 		defer close(c)
 		wg.Wait()
