@@ -10,7 +10,7 @@ import (
 
 var HelloBytes = []byte("Hello World")
 
-func TestHttpServiceHelloWorld(t *testing.T) {
+func TestHttpService_HelloWorld(t *testing.T) {
 	s := Create("", 8080).WithEndpoints(new(Foo)).Start()
 	defer s.Shutdown(0)
 
